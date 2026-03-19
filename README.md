@@ -23,69 +23,93 @@
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝        ╚═╝
 
 
-# figma-to-ai-prompter
+⸻
 
-A Claude skill that reads your Figma design through the Figma MCP and generates optimized, ready-to-paste prompts for AI prototyping tools — calibrated to each tool's prompting model, token budget, and interaction syntax.
+🚀 Overview
 
-## Supported tools
+Figma-to-AI Prompter is a tool that converts Figma designs into structured prompts that can be used with AI tools to generate working prototypes.
 
-| Tool | Model | Output | Token model |
-|------|-------|--------|-------------|
-| [Lovable](https://lovable.dev) | Claude | Full-stack React app | Credit per message |
-| [Figma Make](https://figma.com) | Claude | Interactive HTML prototype | Figma subscription |
-| [Pencil.dev](https://pencil.dev) | AI | Production React component code | Credit per generation |
-| [Paper.design](https://paper.design) | Agent | HTML/CSS canvas + code export | Agent tool calls |
-| [Google Stitch](https://stitch.withgoogle.com) | Gemini 2.5 | Responsive UI → Figma / HTML | 350 or 50 gen/month |
+It bridges the gap between design → prompt → prototype, enabling faster iteration and reducing manual translation effort.
 
-## What it does
+⸻
 
-1. **Checks Figma MCP** — verifies the connection is live before proceeding; if not, asks for a screenshot as fallback
-2. **Reads your Figma design** — uses `get_design_context`, `get_variable_defs`, and `get_screenshot` to extract components, layout, and exact design tokens
-3. **Optionally reads your design system** — if you provide a separate Figma design system file URL, it pulls only the tokens your screen actually uses (not the whole system)
-4. **Proposes interactions** — lists visible interactions from the design, suggests implied ones, waits for your approval before generating
-5. **Generates a tool-specific prompt** — structured, copy-ready, with exact hex values, layer names, action words, states, guardrails, and follow-up prompts
-6. **Reports token cost** — shows an estimated token count for the generated prompt and explains what it means for that specific tool's budget
+🧠 How it works
+	1.	Extract design structure from Figma
+	2.	Transform layout + components into structured prompts
+	3.	Feed prompts into AI tools (Lovable, Figma Make, etc.)
+	4.	Generate working prototypes automatically
 
-## Quick install (Claude — Cowork or Claude Code)
+⸻
 
-Download [`ai-prototype-prompter.skill`](./ai-prototype-prompter.skill) and double-click it, or drag it into Claude.
+🧰 Supported Tools
 
-See [`docs/platforms/claude.md`](./docs/platforms/claude.md) for full setup including Figma MCP connection.
+Tool	Model	Output	Token model
+Lovable￼	Claude	Full-stack React app	Credit per message
+Figma Make￼	Claude	Interactive HTML prototype	Figma subscription
+Pencil.dev￼	AI	Production React components	Credit per generation
+Paper.design￼	Agent	HTML/CSS canvas + code export	Agent tool calls
+Google Stitch￼	Gemini 2.5	Responsive UI → Figma / HTML	Limited monthly generations
 
-## Install on other platforms
 
-- [Claude (Cowork & Claude Code)](./docs/platforms/claude.md)
-- [ChatGPT (Custom GPT)](./docs/platforms/chatgpt.md)
-- [Gemini (Google AI Studio)](./docs/platforms/gemini.md)
-- [Cursor / Windsurf / Copilot](./docs/platforms/cursor.md)
+⸻
 
-## Repository structure
+📂 Project Structure
 
-```
 figma-to-ai-prompter/
-├── ai-prototype-prompter.skill   # installable skill bundle for Claude
-├── skill/
-│   ├── SKILL.md                  # main skill logic and workflow
-│   └── references/
-│       ├── lovable.md            # Lovable prompt pattern + token budget
-│       ├── figma-make.md         # Figma Make prompt pattern + MCP text block
-│       ├── pencil-dev.md         # Pencil.dev prompt pattern + layer inspection
-│       ├── paper-design.md       # Paper.design agent-forward prompt pattern
-│       └── google-stitch.md      # Google Stitch adjective-driven prompt pattern
-└── docs/
-    └── platforms/
-        ├── claude.md             # Claude install + Figma MCP setup
-        ├── chatgpt.md            # ChatGPT Custom GPT setup
-        ├── gemini.md             # Gemini system prompt setup
-        └── cursor.md             # Cursor / Windsurf / Copilot rules setup
-```
+│
+├── prompts/
+│   ├── figma-to-lovable.md
+│   ├── figma-to-figmamake.md
+│   ├── figma-to-pencil.md
+│   └── figma-to-paper.md
+│
+├── examples/
+│   ├── input-figma.json
+│   └── output-prompt.md
+│
+├── scripts/
+│   └── transform.js
+│
+└── README.md
 
-## Requirements
 
-- **Figma MCP** (strongly recommended) — gives the skill direct access to your design file. Without it the skill falls back to screenshot mode. See [Figma MCP setup](./docs/platforms/claude.md#figma-mcp-setup).
-- A Figma file with the screen you want to build
+⸻
 
-## License
+⚙️ Usage
+	1.	Export your Figma design (JSON or structured data)
+	2.	Select your target AI tool
+	3.	Use the corresponding prompt template
+	4.	Paste into your AI tool
+	5.	Generate your prototype
 
-MIT — free to use, fork, and share.
-# figma-to-ai-prompter
+⸻
+
+🎯 Goal
+
+Enable designers and developers to:
+	•	Reduce friction between design and development
+	•	Prototype faster using AI
+	•	Standardize prompt engineering for UI generation
+
+⸻
+
+🔥 Future Improvements
+	•	Automated Figma plugin
+	•	Prompt optimization layer
+	•	Multi-framework output (React, Vue, HTML)
+	•	AI-assisted design validation
+
+⸻
+
+👨‍💻 Author
+
+Roy Villasana
+Senior UX Designer | AI Product Builder
+royvillasana@gmail.com
+
+⸻
+
+⭐ Contribute
+
+Feel free to open issues or submit pull requests to improve prompts, integrations, or workflows.
+
