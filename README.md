@@ -27,9 +27,11 @@
 
 🚀 Overview
 
-Figma-to-AI Prompter is a tool that converts Figma designs into structured prompts that can be used with AI tools to generate working prototypes.
+Figma-to-AI Prompter is a tool that converts Figma designs into structured prompts
+that can be used with AI tools to generate working prototypes.
 
-It bridges the gap between design → prompt → prototype, enabling faster iteration and reducing manual translation effort.
+It bridges the gap between design → prompt → prototype, enabling faster iteration
+and reducing manual translation effort.
 
 ⸻
 
@@ -111,5 +113,6 @@ royvillasana@gmail.com
 
 ⭐ Contribute
 
-Feel free to open issues or submit pull requests to improve prompts, integrations, or workflows.
+Feel free to open issues or submit pull requests to improve prompts,
+integrations, or workflows.
 
