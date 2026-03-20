@@ -131,3 +131,41 @@ budget note from the reference file so the user knows if they're in a safe range
 - Action words for interactions — "on click", "on submit", "opens", "navigates to", "filters"
 - One screen at a time — scope tightly; offer additional screens as follow-ups
 - States — call out loading, empty, error, success if visible or implied
+
+## Step 5 — Validate Make output against Figma design (Figma Make only)
+
+After the user pastes the prompt into Figma Make and gets a result, proactively offer:
+> "Once Make generates your prototype, paste the preview URL here — I'll compare it against
+> your original Figma design and generate correction prompts for anything that's off."
+
+When the user provides a Make preview URL:
+
+1. Use the browser tool (`navigate` to the URL, then take a `computer` screenshot)
+2. Retrieve the original Figma frame screenshot via `get_screenshot` (reuse from context if available)
+3. Compare both images — check for:
+   - **Missing components**: elements visible in Figma but absent in Make output
+   - **Color mismatches**: wrong fills, text colors, or backgrounds vs. design tokens
+   - **Layout shifts**: incorrect spacing, alignment, sizing, or component order
+   - **Typography gaps**: wrong font weight, size, or line-height
+   - **Interaction gaps**: buttons/links that appear non-functional or missing hover/active states
+4. Produce a structured gap report followed by ready-to-paste correction prompts:
+
+```
+## Make Output Review — [Screen Name]
+
+### ✅ Matches design
+- [element]: correct
+
+### ❌ Gaps found
+| Element | Issue | Figma value |
+|---------|-------|-------------|
+| [element] | [what's wrong] | [correct value] |
+
+### Correction prompts (paste into Make one at a time):
+1. [targeted correction using Make action-word syntax]
+2. [targeted correction]
+```
+
+Keep each correction prompt scoped to one issue. Use Make action-words: "change", "set",
+"replace", "on click", "update". Do not bundle multiple fixes into one prompt — Make handles
+focused prompts more reliably than batched ones.

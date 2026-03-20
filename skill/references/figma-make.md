@@ -98,3 +98,21 @@ If the user must paste a Figma frame instead: treat it as +300–500 hidden toke
 text. Subtract that from the ranges above to stay within the same quality thresholds.
 
 **Budget note for output:** `~[N] tokens (MCP text context — no frame attachment needed[, +~[X] tokens for [N] design system tokens]). [Safe / Use progressive prompting — split into layout first then interactions]`
+
+## Output validation — correction prompt syntax
+
+When reviewing a Make output URL against the Figma design, write correction prompts using these
+patterns — one issue per prompt:
+
+| Issue type | Correction prompt pattern |
+|-----------|--------------------------|
+| Wrong color | `Set the [element] background to #[hex]` |
+| Missing component | `Add a [component name] above/below [reference element] — [brief description]` |
+| Wrong spacing | `Set padding on [element] to [value]. Set gap between [a] and [b] to [value]` |
+| Wrong typography | `Change [element] font-size to [px], font-weight to [value], color to #[hex]` |
+| Layout shift | `Change [element] layout to [flex-row/grid/etc], align items [value]` |
+| Non-functional interaction | `on click [element] → [action using Make action-word syntax]` |
+| Wrong border radius | `Set border-radius on [element] to [value]` |
+
+Always reference the element by its visible label or layer name — not by position ("the button"
+is ambiguous; "the Save Changes button" is not).
