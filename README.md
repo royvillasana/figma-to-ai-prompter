@@ -83,6 +83,8 @@ figma-to-ai-prompter/
 	3.	Use the corresponding prompt template
 	4.	Paste into your AI tool
 	5.	Generate your prototype
+	6.  Give to the AI the Figma Make published link to let the Ai validate the outcome
+	7.  The Ai will give you an updated prompt if needed to make the prototype resemble more the Figma design
 
 ⸻
 
