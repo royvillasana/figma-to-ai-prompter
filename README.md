@@ -45,12 +45,12 @@ and reducing manual translation effort.
 
 🧰 Supported Tools
 
-Tool	Model	Output	Token model
-Lovable￼	Claude	Full-stack React app	Credit per message
-Figma Make￼	Claude	Interactive HTML prototype	Figma subscription
-Pencil.dev￼	AI	Production React components	Credit per generation
-Paper.design￼	Agent	HTML/CSS canvas + code export	Agent tool calls
-Google Stitch￼	Gemini 2.5	Responsive UI → Figma / HTML	Limited monthly generations
+Tool	      |     Model	  |           Output	                   |        Token model
+Lovable￼	  |    Claude	  |    Full-stack React app	               |     Credit per message
+Figma Make￼	  |    Claude	  |   Interactive HTML prototype	       |    Figma subscription
+Pencil.dev￼	  |      AI	      |   Production React components	       |   Credit per generation
+Paper.design￼ |	   Agent	  |      HTML/CSS canvas + code export     |	   Agent tool calls
+Google Stitch￼|	  Gemini 2.5  |   Responsive UI → Figma/HTML	       |  Limited monthly generations
 
 
 ⸻
