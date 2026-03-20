@@ -97,16 +97,14 @@ Enable designers and developers to:
 
 ⸻
 
-Here’s a visual benchmark-style section you can drop into your README — designed like high-end AI repos (clear, punchy, credibility-focused):
+⚡ Token Efficiency Benchmark
 
-## ⚡ Token Efficiency Benchmark
-
-> 🔥 **Up to 97% reduction in prompt size**  
-> ⚡ **18% reduction in execution cost**
+> 🔥 Up to 97% reduction in prompt size**  
+>    18% reduction in execution cost**
 
 ⸻
 
-### 📊 End-to-End Token Optimization
+📊 End-to-End Token Optimization
 
 |        Layer          |      Before      |      After      |       Improvement      |
 |-----------------------|------------------|-----------------|------------------------|
@@ -115,7 +113,7 @@ Here’s a visual benchmark-style section you can drop into your README — desi
 
 ⸻
 
-### 📉 Prompt Size Breakdown
+📉 Prompt Size Breakdown
 
 ```txt
 Baseline (estimated)
