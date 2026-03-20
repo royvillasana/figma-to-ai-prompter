@@ -104,16 +104,16 @@ Here’s a visual benchmark-style section you can drop into your README — desi
 > 🔥 **Up to 97% reduction in prompt size**  
 > ⚡ **18% reduction in execution cost**
 
----
+⸻
 
 ### 📊 End-to-End Token Optimization
 
-| Layer | Before | After | Improvement |
-|---|---|---|---|
-| 🧠 Skill Execution | ~40,782 tokens | ~33,508 tokens | **↓ 18%** |
-| ✍️ Prompt Output | 500–1,500 tokens | ~45 tokens | **↓ 91–97%** |
+|        Layer          |      Before      |      After      |       Improvement      |
+|-----------------------|------------------|-----------------|------------------------|
+| 🧠 Skill Execution    |  ~40,782 tokens  |  ~33,508 tokens |        **↓ 18%**       |
+| ✍️ Prompt Output      | 500–1,500 tokens |    ~45 tokens   |       **↓ 91–97%**     |
 
----
+⸻
 
 ### 📉 Prompt Size Breakdown
 
